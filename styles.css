@@ -1,0 +1,49 @@
+.image-container {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các ảnh theo hàng dọc */
+ 
+}
+  
+  .image-container figure {
+    margin: 10px;
+    text-align: center; /* Căn giữa tiêu đề */
+  }
+  
+  .image-container a {
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .image-container a:hover img {
+    transform: scale(1.1); /* Hiệu ứng zoom khi di chuột vào */
+  }
+  
+  .image-container a:hover figcaption {
+    opacity: 1; /* Hiển thị tiêu đề khi di chuột vào */
+  }
+  
+  .image-container img {
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    display: block;
+  }
+  
+  .image-container figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền cho tiêu đề */
+    color: #fff; /* Màu chữ cho tiêu đề */
+    padding: 10px;
+    opacity: 0; /* Ẩn tiêu đề ban đầu */
+    transition: opacity 0.3s ease;
+    font-family: "Arial", sans-serif; /* Font chữ kiểu đẹp */
+    font-size: 16px; /* Kích thước font chữ */
+  }
+  .required {
+    color: rgb(255, 5, 5);
+  }
