@@ -128,3 +128,12 @@ margin-top: 10px;
     text-decoration: underline; /* Gạch chân khi di chuột qua */
     cursor: pointer; /* Con trỏ chuột thành bàn tay khi di chuột qua */
 }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
