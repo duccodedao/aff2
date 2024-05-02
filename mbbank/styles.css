@@ -130,4 +130,13 @@ margin-top: 10px;
 }
 
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
 
