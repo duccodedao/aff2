@@ -1,49 +1,69 @@
-.image-container {
-    display: flex;
-    flex-direction: column; /* Sắp xếp các ảnh theo hàng dọc */
- 
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .image-container figure {
-    margin: 10px;
-    text-align: center; /* Căn giữa tiêu đề */
-  }
-  
-  .image-container a {
-    text-decoration: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: inline-block;
-    position: relative;
-  }
-  
-  .image-container a:hover img {
-    transform: scale(1.1); /* Hiệu ứng zoom khi di chuột vào */
-  }
-  
-  .image-container a:hover figcaption {
-    opacity: 1; /* Hiển thị tiêu đề khi di chuột vào */
-  }
-  
-  .image-container img {
-    transition: transform 0.3s ease;
-    max-width: 100%;
-    display: block;
-  }
-  
-  .image-container figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu nền cho tiêu đề */
-    color: #fff; /* Màu chữ cho tiêu đề */
-    padding: 10px;
-    opacity: 0; /* Ẩn tiêu đề ban đầu */
-    transition: opacity 0.3s ease;
-    font-family: "Arial", sans-serif; /* Font chữ kiểu đẹp */
-    font-size: 16px; /* Kích thước font chữ */
-  }
-  .required {
-    color: rgb(255, 5, 5);
-  }
+
+/* Style cho image-container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Style cho các hình ảnh */
+figure {
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+figure:hover {
+  transform: translateY(-5px);
+}
+
+figure:hover img {
+  transform: scale(1.05);
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+/* Additional styles for a more professional look */
+figcaption h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+figcaption p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-style: italic;
+}
